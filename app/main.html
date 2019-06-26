@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>テストだよ</title>
+</head>
+<body>
+
+<div id="test"></div>
+
+<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js'></script>
+<script>
+    Tesseract.recognize("test.png" ,{lang:"jpn"}).then(function(result){
+        const a = document.querySelector("#test");
+        a.innerHTML = result.html;
+    })
+</script>
+</body>
+</html>
